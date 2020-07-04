@@ -28,44 +28,44 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.saveBtn = new System.Windows.Forms.Button();
+            this.CancelBtn = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.clientTextbox = new System.Windows.Forms.TextBox();
+            this.datePicker = new System.Windows.Forms.DateTimePicker();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
-            this.numericUpDown2 = new System.Windows.Forms.NumericUpDown();
+            this.idInput = new System.Windows.Forms.NumericUpDown();
             this.label4 = new System.Windows.Forms.Label();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
             this.label5 = new System.Windows.Forms.Label();
             this.flowLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.idInput)).BeginInit();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel3.SuspendLayout();
             this.SuspendLayout();
             // 
-            // button1
+            // saveBtn
             // 
-            this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.button1.Location = new System.Drawing.Point(151, 132);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(93, 33);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "Сохранить";
-            this.button1.UseVisualStyleBackColor = true;
+            this.saveBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.saveBtn.Location = new System.Drawing.Point(151, 132);
+            this.saveBtn.Name = "saveBtn";
+            this.saveBtn.Size = new System.Drawing.Size(93, 33);
+            this.saveBtn.TabIndex = 0;
+            this.saveBtn.Text = "Сохранить";
+            this.saveBtn.UseVisualStyleBackColor = true;
             // 
-            // button2
+            // CancelBtn
             // 
-            this.button2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.button2.Location = new System.Drawing.Point(250, 132);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(81, 33);
-            this.button2.TabIndex = 1;
-            this.button2.Text = "Отмена";
-            this.button2.UseVisualStyleBackColor = true;
+            this.CancelBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.CancelBtn.Location = new System.Drawing.Point(250, 132);
+            this.CancelBtn.Name = "CancelBtn";
+            this.CancelBtn.Size = new System.Drawing.Size(81, 33);
+            this.CancelBtn.TabIndex = 1;
+            this.CancelBtn.Text = "Отмена";
+            this.CancelBtn.UseVisualStyleBackColor = true;
             // 
             // label1
             // 
@@ -77,23 +77,23 @@
             this.label1.TabIndex = 2;
             this.label1.Text = "Client";
             // 
-            // textBox1
+            // clientTextbox
             // 
-            this.textBox1.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.textBox1.Location = new System.Drawing.Point(115, 3);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(191, 22);
-            this.textBox1.TabIndex = 5;
+            this.clientTextbox.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.clientTextbox.Location = new System.Drawing.Point(115, 3);
+            this.clientTextbox.Name = "clientTextbox";
+            this.clientTextbox.Size = new System.Drawing.Size(191, 22);
+            this.clientTextbox.TabIndex = 5;
             // 
-            // dateTimePicker1
+            // datePicker
             // 
-            this.dateTimePicker1.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.dateTimePicker1.CustomFormat = "dd.MM.yyyy HH:mm:ss";
-            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dateTimePicker1.Location = new System.Drawing.Point(115, 3);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(191, 22);
-            this.dateTimePicker1.TabIndex = 6;
+            this.datePicker.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.datePicker.CustomFormat = "dd.MM.yyyy HH:mm:ss";
+            this.datePicker.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.datePicker.Location = new System.Drawing.Point(115, 3);
+            this.datePicker.Name = "datePicker";
+            this.datePicker.Size = new System.Drawing.Size(191, 22);
+            this.datePicker.TabIndex = 6;
             // 
             // flowLayoutPanel1
             // 
@@ -117,7 +117,7 @@
             this.tableLayoutPanel2.ColumnCount = 2;
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
-            this.tableLayoutPanel2.Controls.Add(this.numericUpDown2, 1, 0);
+            this.tableLayoutPanel2.Controls.Add(this.idInput, 1, 0);
             this.tableLayoutPanel2.Controls.Add(this.label4, 0, 0);
             this.tableLayoutPanel2.Location = new System.Drawing.Point(3, 3);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
@@ -126,14 +126,14 @@
             this.tableLayoutPanel2.Size = new System.Drawing.Size(309, 28);
             this.tableLayoutPanel2.TabIndex = 9;
             // 
-            // numericUpDown2
+            // idInput
             // 
-            this.numericUpDown2.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.numericUpDown2.Location = new System.Drawing.Point(115, 3);
-            this.numericUpDown2.Name = "numericUpDown2";
-            this.numericUpDown2.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.numericUpDown2.Size = new System.Drawing.Size(191, 22);
-            this.numericUpDown2.TabIndex = 7;
+            this.idInput.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.idInput.Location = new System.Drawing.Point(115, 3);
+            this.idInput.Name = "idInput";
+            this.idInput.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.idInput.Size = new System.Drawing.Size(191, 22);
+            this.idInput.TabIndex = 7;
             // 
             // label4
             // 
@@ -155,7 +155,7 @@
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
             this.tableLayoutPanel1.Controls.Add(this.label1, 0, 0);
-            this.tableLayoutPanel1.Controls.Add(this.textBox1, 1, 0);
+            this.tableLayoutPanel1.Controls.Add(this.clientTextbox, 1, 0);
             this.tableLayoutPanel1.Location = new System.Drawing.Point(3, 37);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 1;
@@ -172,7 +172,7 @@
             this.tableLayoutPanel3.ColumnCount = 2;
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
-            this.tableLayoutPanel3.Controls.Add(this.dateTimePicker1, 1, 0);
+            this.tableLayoutPanel3.Controls.Add(this.datePicker, 1, 0);
             this.tableLayoutPanel3.Controls.Add(this.label5, 0, 0);
             this.tableLayoutPanel3.Location = new System.Drawing.Point(3, 71);
             this.tableLayoutPanel3.Name = "tableLayoutPanel3";
@@ -196,8 +196,8 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(343, 177);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.CancelBtn);
+            this.Controls.Add(this.saveBtn);
             this.Controls.Add(this.flowLayoutPanel1);
             this.Name = "ChangeRow";
             this.Text = "Изменить строку";
@@ -205,7 +205,7 @@
             this.flowLayoutPanel1.PerformLayout();
             this.tableLayoutPanel2.ResumeLayout(false);
             this.tableLayoutPanel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.idInput)).EndInit();
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
             this.tableLayoutPanel3.ResumeLayout(false);
@@ -216,14 +216,14 @@
 
         #endregion
 
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button saveBtn;
+        private System.Windows.Forms.Button CancelBtn;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.TextBox clientTextbox;
+        private System.Windows.Forms.DateTimePicker datePicker;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
-        private System.Windows.Forms.NumericUpDown numericUpDown2;
+        private System.Windows.Forms.NumericUpDown idInput;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel3;

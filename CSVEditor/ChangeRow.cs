@@ -12,9 +12,13 @@ namespace CSVEditor
 {
     public partial class ChangeRow : Form
     {
-        public ChangeRow()
+        public ChangeRow(int id = 0, string client = "", DateTime dateTime = new DateTime())
         {
             InitializeComponent();
+            
+            idInput.Value = id;
+            clientTextbox.Text = client;
+            datePicker.Value = dateTime;
         }
     }
 }

@@ -36,10 +36,10 @@
             this.pageNumber = new System.Windows.Forms.TextBox();
             this.prevPageBtn = new System.Windows.Forms.Button();
             this.openFileDialog = new System.Windows.Forms.OpenFileDialog();
-            this.insert_date = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.client = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.csvData = new System.Windows.Forms.DataGridView();
+            this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.client = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.insertDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.mainMenu.SuspendLayout();
@@ -122,27 +122,6 @@
             this.openFileDialog.FileName = "csvFile";
             this.openFileDialog.Filter = "CSV Файлы|*.csv";
             // 
-            // insert_date
-            // 
-            this.insert_date.HeaderText = "DateTime";
-            this.insert_date.MinimumWidth = 50;
-            this.insert_date.Name = "insert_date";
-            this.insert_date.ReadOnly = true;
-            // 
-            // client
-            // 
-            this.client.HeaderText = "client";
-            this.client.MinimumWidth = 50;
-            this.client.Name = "client";
-            this.client.ReadOnly = true;
-            // 
-            // id
-            // 
-            this.id.HeaderText = "id";
-            this.id.MinimumWidth = 6;
-            this.id.Name = "id";
-            this.id.ReadOnly = true;
-            // 
             // csvData
             // 
             this.csvData.AllowUserToAddRows = false;
@@ -156,7 +135,7 @@
             this.csvData.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.id,
             this.client,
-            this.insert_date});
+            this.insertDate});
             this.csvData.Location = new System.Drawing.Point(3, 3);
             this.csvData.MinimumSize = new System.Drawing.Size(100, 0);
             this.csvData.Name = "csvData";
@@ -166,7 +145,28 @@
             this.csvData.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             this.csvData.Size = new System.Drawing.Size(770, 360);
             this.csvData.TabIndex = 2;
-            this.csvData.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.csvData_CellContentDoubleClick);
+            this.csvData.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.csvData_CellDoubleClick);
+            // 
+            // id
+            // 
+            this.id.HeaderText = "id";
+            this.id.MinimumWidth = 6;
+            this.id.Name = "id";
+            this.id.ReadOnly = true;
+            // 
+            // client
+            // 
+            this.client.HeaderText = "client";
+            this.client.MinimumWidth = 50;
+            this.client.Name = "client";
+            this.client.ReadOnly = true;
+            // 
+            // insertDate
+            // 
+            this.insertDate.HeaderText = "Insert Date";
+            this.insertDate.MinimumWidth = 50;
+            this.insertDate.Name = "insertDate";
+            this.insertDate.ReadOnly = true;
             // 
             // tableLayoutPanel1
             // 
@@ -232,12 +232,12 @@
         private System.Windows.Forms.TextBox pageNumber;
         private System.Windows.Forms.Button prevPageBtn;
         private System.Windows.Forms.OpenFileDialog openFileDialog;
-        private System.Windows.Forms.DataGridViewTextBoxColumn insert_date;
-        private System.Windows.Forms.DataGridViewTextBoxColumn client;
-        private System.Windows.Forms.DataGridViewTextBoxColumn id;
         private System.Windows.Forms.DataGridView csvData;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn id;
+        private System.Windows.Forms.DataGridViewTextBoxColumn client;
+        private System.Windows.Forms.DataGridViewTextBoxColumn insertDate;
     }
 }
 

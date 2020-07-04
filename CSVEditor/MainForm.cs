@@ -10,6 +10,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using TinyCsvParser.Model;
 
 namespace CSVEditor
 {
@@ -20,9 +21,10 @@ namespace CSVEditor
             InitializeComponent();
         }
 
-        private void csvData_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
+        private void csvData_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
-            ChangeRow changeRow = new ChangeRow();
+            DataGridViewCellCollection rowData = csvData.Rows[e.RowIndex].Cells;
+            ChangeRow changeRow = new ChangeRow((int)rowData["id"].Value, (string)rowData["client"].Value, DateTime.Parse((string)rowData["insertDate"].Value));
             changeRow.Show();
         }
 
