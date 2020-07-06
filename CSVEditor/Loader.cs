@@ -13,8 +13,6 @@ namespace CSVEditor
 {
     public partial class Loader : Form
     {
-        private Thread t;
-
         public Loader()
         {
             InitializeComponent();
