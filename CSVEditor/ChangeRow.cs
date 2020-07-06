@@ -12,13 +12,52 @@ namespace CSVEditor
 {
     public partial class ChangeRow : Form
     {
-        public ChangeRow(int id = 0, string client = "", DateTime dateTime = new DateTime())
+        private readonly int recordIndex = -1;
+
+        public ChangeRow()
         {
             InitializeComponent();
-            
-            idInput.Value = id;
-            clientTextbox.Text = client;
-            datePicker.Value = dateTime;
+
+            Text = "Добавить элемент";
+        }
+
+        public ChangeRow(int index, ClientInfo editingData)
+        {
+            InitializeComponent();
+
+            Text = "Изменить элемент";
+
+            recordIndex = index;
+
+            idInput.Value = editingData.Id;
+            clientTextbox.Text = editingData.Client;
+            datePicker.Value = editingData.InsertDate;
+        }
+
+        private void saveBtn_Click(object sender, EventArgs e)
+        {
+            ClientInfo newInfo = new ClientInfo(
+                Convert.ToInt32(idInput.Value),
+                clientTextbox.Text,
+                datePicker.Value
+            );
+
+            if (recordIndex == -1)
+            {
+                DataHandler.AddRow(newInfo);
+            } else
+            {
+                DataHandler.UpdateRow(recordIndex, newInfo);
+            }
+
+            ((MainForm)Application.OpenForms["MainForm"]).UpdateTable();
+
+            Close();
+        }
+
+        private void cancelBtn_Click(object sender, EventArgs e)
+        {
+            Close();
         }
     }
 }

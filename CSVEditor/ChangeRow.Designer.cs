@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.saveBtn = new System.Windows.Forms.Button();
-            this.CancelBtn = new System.Windows.Forms.Button();
+            this.cancelBtn = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.clientTextbox = new System.Windows.Forms.TextBox();
             this.datePicker = new System.Windows.Forms.DateTimePicker();
@@ -54,18 +54,20 @@
             this.saveBtn.Name = "saveBtn";
             this.saveBtn.Size = new System.Drawing.Size(93, 33);
             this.saveBtn.TabIndex = 0;
-            this.saveBtn.Text = "Сохранить";
+            this.saveBtn.Text = "ОК";
             this.saveBtn.UseVisualStyleBackColor = true;
+            this.saveBtn.Click += new System.EventHandler(this.saveBtn_Click);
             // 
-            // CancelBtn
+            // cancelBtn
             // 
-            this.CancelBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.CancelBtn.Location = new System.Drawing.Point(250, 132);
-            this.CancelBtn.Name = "CancelBtn";
-            this.CancelBtn.Size = new System.Drawing.Size(81, 33);
-            this.CancelBtn.TabIndex = 1;
-            this.CancelBtn.Text = "Отмена";
-            this.CancelBtn.UseVisualStyleBackColor = true;
+            this.cancelBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.cancelBtn.Location = new System.Drawing.Point(250, 132);
+            this.cancelBtn.Name = "cancelBtn";
+            this.cancelBtn.Size = new System.Drawing.Size(81, 33);
+            this.cancelBtn.TabIndex = 1;
+            this.cancelBtn.Text = "Отмена";
+            this.cancelBtn.UseVisualStyleBackColor = true;
+            this.cancelBtn.Click += new System.EventHandler(this.cancelBtn_Click);
             // 
             // label1
             // 
@@ -130,6 +132,11 @@
             // 
             this.idInput.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.idInput.Location = new System.Drawing.Point(115, 3);
+            this.idInput.Maximum = new decimal(new int[] {
+            -1530494976,
+            232830,
+            0,
+            0});
             this.idInput.Name = "idInput";
             this.idInput.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.idInput.Size = new System.Drawing.Size(191, 22);
@@ -196,11 +203,11 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(343, 177);
-            this.Controls.Add(this.CancelBtn);
+            this.Controls.Add(this.cancelBtn);
             this.Controls.Add(this.saveBtn);
             this.Controls.Add(this.flowLayoutPanel1);
             this.Name = "ChangeRow";
-            this.Text = "Изменить строку";
+            this.Text = "Изменить элемент";
             this.flowLayoutPanel1.ResumeLayout(false);
             this.flowLayoutPanel1.PerformLayout();
             this.tableLayoutPanel2.ResumeLayout(false);
@@ -217,7 +224,7 @@
         #endregion
 
         private System.Windows.Forms.Button saveBtn;
-        private System.Windows.Forms.Button CancelBtn;
+        private System.Windows.Forms.Button cancelBtn;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox clientTextbox;
         private System.Windows.Forms.DateTimePicker datePicker;
